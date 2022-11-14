@@ -51,8 +51,11 @@ class ArbolBinario:
             self.pre_orden(r.izdo)
             self.pre_orden(r.dcho)
 
-    # def pos_orden(self, r):
-    #     if not r is None:
+    def pos_orden(self, r):
+        if not r is None:
+            self.pos_orden(r.izdo)
+            self.pos_orden(r.dcho)
+            print(r.info)
 
     def busqueda(self, r, x):
         if r is None:
@@ -67,6 +70,6 @@ class ArbolBinario:
 
 arbol = ArbolBinario()
 arbol.crear_arbol()
-# arbol.en_orden(arbol.raiz)
+arbol.en_orden(arbol.raiz)
 # arbol.pre_orden(arbol.raiz)
-arbol.busqueda(arbol.raiz, '18')
+# arbol.busqueda(arbol.raiz, '18')
